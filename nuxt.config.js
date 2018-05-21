@@ -23,6 +23,9 @@ module.exports = {
   */
   loading: { color: '#FFFFFF' },
 
+
+  dev: process.env.NODE_ENV !== 'production',
+
   /*
   ** Global CSS
   */

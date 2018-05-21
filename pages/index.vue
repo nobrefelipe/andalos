@@ -10,7 +10,7 @@
            :key="post.id"
            class="stack-block" >
 
-               <div class="wrapper">
+
 
                    <PostPreview
                        :slug="post.slug"
@@ -22,7 +22,7 @@
                        :videoURL="post.videoURL"
                        :thumbnail="post.featuredImage"/>
 
-               </div>
+
 
        </div>
 <!-- END: NON FEATURED POSTS -->
