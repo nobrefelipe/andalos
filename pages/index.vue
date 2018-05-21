@@ -7,7 +7,6 @@
 <!-- NON FEATURED POSTS -->
        <div
            v-for="post in allPosts"
-           v-if="!post.isFeatured && !post.displayGrid"
            :key="post.id"
            class="stack-block" >
 
@@ -42,7 +41,6 @@
 
         <div
             v-for="post in allIntinerarios"
-            v-if="!post.displayGrid"
             :key="post.id"
             class="stack-block" >
 
@@ -89,8 +87,6 @@ const allPosts = gql`
             excerpt
             videoURL
             createdAt
-            isFeatured
-            displayGrid
             postPreviewLayout
             postMainMedia
             buttonStyle
@@ -113,23 +109,6 @@ const allIntinerarios = gql`
             postPreviewLayout
             buttonStyle
             postMainMedia
-        }
-    }
-`;
-
-const allFeaturedPostsGrid = gql`
-    query allPosts {
-        allPosts(filter: {
-            AND:[{
-              displayGrid: true
-            }]
-          }, orderBy: createdAt_DESC, first: 2) {
-            id
-            title
-            slug
-            excerpt
-            buttonStyle
-            featuredImage
         }
     }
 `;

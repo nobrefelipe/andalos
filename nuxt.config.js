@@ -39,8 +39,6 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios',
 
     // ADD APOLLO CLIENT
     ['@nuxtjs/apollo'],
