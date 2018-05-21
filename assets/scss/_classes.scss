@@ -1,0 +1,103 @@
+
+.stack-block{
+
+  float: left;
+
+  width: 100%;
+
+  padding: 100px 0;
+
+  overflow: hidden;
+
+
+  @include mobile{
+
+    padding: 50px 0;
+
+  }
+}
+
+.full-width{
+
+  width: 100vw;
+
+  height: 100vh;
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+}
+
+
+.wrapper{
+
+  width: 100%;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+
+  &.no-gap-mobile{
+
+    @include mobilePortrait{
+
+      padding: 0;
+
+    }
+
+  }
+
+}
+
+
+.has-horizontal-line{
+
+  position: relative;
+
+  &:before{
+
+    transform: translateX(-150%);
+
+    position: absolute;
+
+    left: 0;
+
+    top:30px;
+
+    content:"";
+
+    width: 6%;
+
+    height: 2px;
+
+    background: $yellow;
+
+  }
+
+  &.dark{
+
+    &:before{
+
+      background: $dark;
+
+    }
+
+  }
+}
+
+
+.parallaxed{
+
+  --multiplier: 0.1;
+
+  --translate: calc(var(--scroll-amount) * var(--multiplier) * 1px);
+
+  transform: translateY(var(--translate));
+
+
+}

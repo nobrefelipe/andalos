@@ -1,0 +1,64 @@
+#header{
+
+  position: fixed;
+
+  z-index: 1000;
+
+  left: 0;
+
+  top:0;
+
+  width: 100%;
+
+  background: #fff;
+
+  box-shadow: 0 3px 3px -3px rgba(0,0,0,0.2);
+
+
+
+  .wrapper{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+  }
+
+
+  .logo{
+
+    margin: -3px auto 0 0;
+
+    path{stroke: transparent;}
+  }
+
+  @media all and(max-width: 668px) {
+
+
+    .wrapper{
+
+      justify-content: center;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      padding: 0;
+
+      .logo{
+        margin: 10px auto 0;
+      }
+
+    }
+
+    .social{
+
+      display: none;
+
+    }
+
+  }
+
+}

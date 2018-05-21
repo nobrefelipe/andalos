@@ -1,0 +1,126 @@
+#nav{
+
+  float: left;
+
+  display: flex;
+
+  overflow: hidden;
+
+  align-items: center;
+
+
+  a{
+
+    color: #444;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 300;
+
+    padding: 20px;
+
+    cursor: pointer;
+
+    transition: all .3s ease;
+
+    &:hover{
+
+      color: $yellow;
+
+    }
+
+  }
+
+
+  @media all and(max-width: 668px) {
+
+    width: 100%;
+
+    white-space: nowrap;
+
+    overflow-y: hidden;
+
+    overflow-x: scroll;
+
+    -webkit-overflow-scrolling: touch;
+
+
+    a{
+
+      color: #333;
+
+      padding: 15px 15px;
+
+      font-size: 14px;
+
+      display: inline;
+
+
+      // ADD LITTLE DOT TO THE LINKS BUT THE LAST
+      &:not(:last-of-type){
+        &:after{
+
+          content: "";
+
+          float: right;
+
+          background: rgba(0,0,0,.2);
+
+          width: 4px;
+
+          height: 4px;
+
+          border-radius: 50%;
+
+          margin: 6px -16px 0 0;
+
+        }
+      }
+
+      &:last-of-type{
+
+        padding-right: 35px;
+
+      }
+
+    }
+
+
+    // HIDE SCROLL BAR
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+
+    // WHITE FADE ON THE RIGHT SO USERS KNOW THEY CAN SCROLL
+    &:before{
+      content: "";
+      width: 30px;
+      height: 40px;
+      background: #fff;
+      position: absolute;
+      left: calc(100% - 30px);
+      bottom: 10px;
+      filter: blur(3px);
+      opacity: .9;
+    }
+
+
+    // WHITE FADE ON THE LEFT SO USERS KNOW THEY CAN SCROLL
+    &:after{
+      content: "";
+      width: 15px;
+      height: 40px;
+      background: #fff;
+      position: absolute;
+      left: 0;
+      bottom: 10px;
+      filter: blur(3px);
+      opacity: .9;
+    }
+
+  }
+
+}

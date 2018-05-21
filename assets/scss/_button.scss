@@ -1,0 +1,234 @@
+
+.button{
+
+  float: left;
+
+  padding: 21px 40px 18px 40px;
+
+  margin-top: 30px;
+
+  font-size: 16px;
+
+  text-decoration: none;
+
+  transition: all .3s ease;
+
+  color: #333;
+
+  font-weight: 300;
+
+  cursor: pointer;
+
+
+  &.Outlined{
+
+    border: 1px solid #999;
+
+    &:hover{
+
+      background: $yellow;
+
+      border-color: transparent;
+
+    }
+
+  }
+
+  &.Solid{
+
+    border: 1px solid transparent;
+
+    background: $yellow;
+
+    &:hover{
+
+      background: transparent;
+
+      border-color: #999;
+
+    }
+
+  }
+
+  &.arrow{
+
+    &:after{
+
+      float: right;
+
+      content: "\2192";
+
+      margin-left: 40px;
+
+      transition: all .3s ease;
+
+    }
+
+    &:hover{
+
+      &:after{
+
+        transform: translateX(5px);
+
+      }
+
+    }
+
+  }
+
+}
+
+
+.play-button{
+
+  position: absolute;
+
+  background: #101010;
+
+  border: 0;
+
+  cursor: pointer;
+
+  width: 150px;
+
+  height: 150px;
+
+  border-radius: 50%;
+
+  transition: all .3s cubic-bezier(.34,1.41,.77,1.3);
+
+  z-index: 100;
+
+
+  &:after{
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 53%;
+
+    transform: translate(-50%,-50%);
+
+    content:"";
+
+
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+
+    border-left-width: 40px;
+    border-left-style: solid;
+    border-left-color: #fff;
+
+
+  }
+
+
+  &:hover{
+
+    transform: scale(1.2);
+
+  }
+
+  &.white{
+
+    background: #ededed;
+
+    &:after{
+
+      border-left-color: $dark;
+
+    }
+  }
+
+
+  @include mobile{
+
+    width: 100px;
+
+    height: 100px;
+
+
+    &:after{
+
+
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+
+      border-left-width: 28px;
+
+
+    }
+
+  }
+
+
+}
+
+
+.close-button{
+
+  position: absolute;
+
+  background: #101010;
+
+  border: 0;
+
+  cursor: pointer;
+
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 50%;
+
+  transition: all .3s cubic-bezier(.34,1.41,.77,1.3);
+
+  z-index: 100;
+
+  opacity: 0;
+
+  &:after{
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 53%;
+
+    transform: translate(-56%,-50%) rotate(45deg);
+
+    content:"+";
+
+    font-size: 50px;
+
+    font-weight: 100;
+
+
+
+  }
+
+
+  &:hover{
+
+    transform: scale(1.2);
+
+    opacity: 1;
+
+  }
+
+  &.white{
+
+    background: #ededed;
+
+    &:after{
+
+      border-left-color: $dark;
+
+    }
+  }
+
+
+}

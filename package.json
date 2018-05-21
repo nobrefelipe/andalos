@@ -1,0 +1,32 @@
+{
+  "name": "Andalos",
+  "version": "1.0.0",
+  "description": "Andalos Travel Blog",
+  "author": "Felipe Nobre ",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^3.0.0",
+    "@nuxtjs/axios": "^5.0.0",
+    "apollo-cache-inmemory": "^1.1.1",
+    "apollo-link": "^1.0.3",
+    "apollo-link-http": "^1.2.0",
+    "graphql": "^0.11.7",
+    "graphql-tag": "^2.5.0",
+    "nuxt": "^1.0.0",
+    "storyblok-nuxt": "0.0.3",
+    "vue-custom-properties-parallax": "^0.2.5",
+    "vue-markdown": "^2.2.4",
+    "yt-player": "^3.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6"
+  }
+}

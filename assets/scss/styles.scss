@@ -1,0 +1,58 @@
+
+@import "vars";
+
+@import "pallete";
+@import "resets";
+
+@import "helpers/breakpoints";
+@import "helpers/flexy";
+
+@import "libs/medium-lightbox";
+
+@import "classes";
+@import "typography";
+@import "button";
+@import "nav";
+@import "header";
+@import "block-items";
+@import "video-wrapper";
+@import "social";
+@import "grid-slideshow";
+@import "featured-section";
+@import "post-block";
+
+body{
+
+  padding-top: 60px;
+
+  //&:after,
+  //&:before{
+  //  position: fixed;
+  //  content:'';
+  //  background: red;
+  //  z-index: 9999;
+  //
+  //  top: 50%;
+  //  left: 50%;
+  //  transform: translate(-50%,-50%);
+  //}
+  //
+  //&:after{
+  //
+  //  width: 1px;
+  //  height: 100vh;
+  //
+  //}
+  //
+  //&:before{
+  //  width: 100vw;
+  //  height: 1px;
+  //}
+
+  @include mobile{
+
+    padding-top: 55px;
+
+  }
+
+}
